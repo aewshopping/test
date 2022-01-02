@@ -1,0 +1,256 @@
+:root {
+  --mycolor-bg: #FFFFFF;
+
+  --mycolor-accent: #E22658;
+  --mycolor-accent2: rgb(112,15,41,0.8);
+
+  --mycolor-accent-light: #E85279;
+  --mycolor-accent-very-light: #F296AE;
+  --mycolor-accent-dark: #B41841;
+  --mycolor-accent-very-dark: #79112C;
+  --mycolor-accent-box-shadow-color: rgba(226, 38, 88, 0.3);
+  --mycolor-accent-box-shadow-color-darker: vrgba(226, 38, 88, 0.6);
+
+  --mycolor-text-main: #000000;
+  --mycolor-primary: #000000;
+  --mycolor-secondary: #6D6D6D;
+  --mycolor-bg2: #DBDBDB;
+/*  --mywrapper-height: 85vh;
+  --myimage-max-width: 320px; */
+  --myfont-family: "Cabin";
+  --myfont-family-header: "Cabin";
+  
+  /* overwrite halfmoon variables here to preserve original file */
+  /* need to make sure this css file is called after halfmoon.css */
+  --primary-color: var(--mycolor-accent);
+  --primary-color-light: var(--mycolor-accent-light);
+  --primary-color-very-light: var(--mycolor-accent-very-light);
+  --primary-color-dark: var(--mycolor-accent-dark);
+  --primary-color-very-dark: var(--mycolor-accent-very-dark);
+  --primary-box-shadow-color: var(--mycolor-accent-box-shadow-color);
+  --primary-box-shadow-color-darker: var(--mycolor-accent-box-shadow-color-darker);
+  --text-color-on-primary-color-bg: var(--text-color-on-blue-color-bg);
+}
+
+/* adjust halfmoon classes below here */
+
+.modal {
+    opacity: 0.95;
+}
+
+
+.collapse-header {
+  font-size: 20px;
+}
+
+.container {
+  overflow:auto;
+}
+  
+.filterbutton {
+  font-size: 18px;
+  margin: 5px;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* adjust halfmoon classes above here */
+
+html, body {
+  margin: 0px;
+  padding: 10px; 
+  font-family: var(--myfont-family), san-serif;
+  font-weight: 400;
+  text-align: left;
+/*  font-size: 1rem; */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--myfont-family-header), san-serif;
+  font-weight: 700;
+}
+
+ h1 {
+  font-size: 3rem;
+  letter-spacing: -2px;
+  word-spacing: -2px;
+}
+
+html {
+  font-size: 0.7rem;
+}
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 600px) { 
+  h1 { font-size: 3.5rem; }
+  html { font-size: 0.9rem;}
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 900px) { 
+  h1 { font-size: 4rem; }
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+  h1 { font-size: 5rem; }
+}
+
+
+.myMenu {
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
+}
+
+canvas {
+  display: block;
+}
+
+img.emoji {
+   height: 1.1em;
+   width: 1.1em;
+   margin: 0 .05em 0 .1em;
+   vertical-align: -0.1em;
+}
+
+.my-btn-cancel {
+ /* font-size: 18px; */
+  margin: 5px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.my-close {
+  font-size: 36px;
+ color: var(--gray-color-very-dark);
+}
+
+
+.image {
+	display: block;
+	width: 100%;
+	height: auto;
+/*	box-shadow: 4px 4px 4px grey; removed as using halfmoon dark mode shadows*/
+	opacity: 1;
+	filter: grayscale(0%);
+}
+
+.image_highlight {
+	display: block;
+	width: 100%;
+	height: auto;
+	box-shadow: 4px 4px 4px #700f29;
+}
+
+.emoji_text {
+	float: left;
+	margin-bottom: 0;
+  margin-top: 0;
+	margin-left: 5px;
+  font-size: 18px;
+}
+
+a.noLine {
+    text-decoration: none;
+}
+
+.overlay_large {
+	position: absolute;
+	z-index: 1;
+	top: 3.3%;
+	background: rgb(0,0,0);
+	background: rgba(0,0,0,0.7);
+/* Black see-through */
+	color: #f1f1f1;
+	width: 165px;
+	min-height: 135px;
+	transition: .5s ease;
+	opacity: 0;
+	color: white;
+	font-size: 18px;
+	padding: 2px;
+	text-align: center;
+}
+
+.overlay_large_highlight {
+	position: absolute;
+	z-index: 1;
+	top: 3.3%;
+	background: var(--mycolor-accent2);
+	color: #f1f1f1;
+	width: 165px;
+	min-height: 135px;
+	transition: .5s ease;
+	opacity: 0;
+	color: white;
+	font-size: 18px;
+	padding: 2px;
+	text-align: center;
+  padding-top: 0;
+}
+
+.gr_grid_book_container_large:hover .overlay_large {
+	opacity: 1;
+}
+
+.gr_grid_book_container:hover .overlay_large {
+	opacity: 1;
+}
+
+.gr_grid_book_container_large_highlight:hover .overlay_large_highlight {
+	opacity: 1;
+}
+
+.gr_grid_book_container_highlight:hover .overlay_large_highlight {
+	opacity: 1;
+}
+
+.gr_grid_container {
+/* customize grid container div here. eg: width: 500px; */
+	width: 100%;
+}
+
+.gr_grid_book_container {
+/* customize book cover container div here */
+	float: left;
+	width: 98px; 
+	height: 160px;
+	padding: 5px;
+	overflow: visible;
+	position: relative;
+}
+
+.gr_grid_book_container_large {
+/* customize book cover container div here */
+	float: left;
+	width: 185px;
+	height: 300px;
+	padding: 10px;
+	overflow: visible;
+	position: relative;
+}
+
+.gr_grid_book_container_highlight {
+/* customize book cover container div here */
+	float: left;
+	width: 98px;
+	height: 160px;
+	padding: 5px;
+	overflow: visible;
+	position: relative;
+	background-color: var(--mycolor-accent);
+}
+
+.gr_grid_book_container_large_highlight {
+/* customize book cover container div here */
+	float: left;
+	width: 185px;
+	height: 300px;
+	padding: 10px;
+	background-color: var(--mycolor-accent);
+	overflow: visible;
+	position: relative;
+}
